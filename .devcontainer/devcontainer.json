@@ -1,6 +1,6 @@
 {
   "name": "Flutter dev environment Docker",
-  "image": "flutterdev:latest",
+  "image": "rrjorgegz/flutter-dev-environment-docker:latest",
   // "context": "..",
   // "dockerFile": "../Dockerfile",
   "runArgs": ["--privileged", "--net", "host"],

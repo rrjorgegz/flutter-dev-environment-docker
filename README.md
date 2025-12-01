@@ -7,7 +7,8 @@ This repository is a template for mount a local environment for work with Flutte
 1. You need installed [Docker](https://www.docker.com/get-started/) in your machine.
 2. Clone your flutter project into `/workspace` folder.
 3. Open this project in vscode and after select open in container.
-4. Enjoi, happy coding!
+4. docker pull rrjorgegz/flutter-dev-environment-docker:latest
+5. Enjoi, happy coding!
 
 > In the [NoEMEC](https://www.youtube.com/c/NoEMEC_Dev) channel we will have a video teaching how to use this repository.
 
