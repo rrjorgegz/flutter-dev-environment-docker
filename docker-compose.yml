@@ -1,0 +1,28 @@
+services:
+  flutter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        FLUTTER_VERSION: stable
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+    image: flutter-dev-environment
+    container_name: flutter-dev
+    volumes:
+      # Mount your project directory
+      - ./app:/app
+      # Persist pub cache for faster dependency resolution
+      - flutter-pub-cache:/home/developer/.pub-cache
+    environment:
+      - FLUTTER_HOME=/opt/flutter
+    stdin_open: true
+    tty: true
+    # For Flutter web development
+    ports:
+      - "8080:8080"
+      - "9100:9100"  # DevTools
+    working_dir: /app
+
+volumes:
+  flutter-pub-cache:
