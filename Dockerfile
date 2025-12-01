@@ -11,7 +11,7 @@ RUN apt update && apt install -y \
     curl \
     git \
     unzip \
-    openjdk-8-jdk \
+    openjdk-11-jdk \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
