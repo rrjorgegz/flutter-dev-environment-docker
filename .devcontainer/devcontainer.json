@@ -17,8 +17,8 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "dart.flutterSdkPath": "/home/workspace/flutter_project",  // Ajusta según tu imagen
-        "dart.sdkPath": "/home/workspace/flutter_project/bin/cache/dart-sdk"
+        "dart.flutterSdkPath": "/home/root/flutter/bin",  // Ajusta según tu imagen
+        "dart.sdkPath": "/home/root/Android/sdk/cmdline-tools/latest/bin/cache/dart-sdk"
       },
       "extensions": [
         "dart-code.flutter",
@@ -35,7 +35,7 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
-            "cwd": "/home/workspace/flutter_project"  // Asegúrate que apunte al workspace correcto
+            "cwd": "/home/workspace"  // Asegúrate que apunte al workspace correcto
           },
           {
             "name": "Flutter (Debug Mode)",
