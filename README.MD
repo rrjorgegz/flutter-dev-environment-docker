@@ -1,5 +1,5 @@
-# flutter-dev-environment-docker
-env flutter
+# Flutter local environment with Docker
+
 This repository is a template for mount a local environment for work with Flutter inside a container.
 
 ## Usage and first steps

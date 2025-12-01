@@ -1,0 +1,65 @@
+{
+  "name": "Flutter dev environment Docker",
+  "image": "flutterdev:latest",
+  // "context": "..",
+  // "dockerFile": "../Dockerfile",
+  "runArgs": ["--privileged", "--net", "host"],
+  "extensions": [
+    "dart-code.flutter",
+    "circlecodesolution.ccs-flutter-color",
+    "Dart-Code.flutter",
+    "alexisvt.flutter-snippets",
+    "MarufHassan.flutter-snippets"
+  ],
+  "workspaceMount": "source=${localWorkspaceFolder}/workspace,target=/home/workspace,type=bind,consistency=delegated",
+  "workspaceFolder": "/home/workspace",
+  // Configuración para el debugger
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "dart.flutterSdkPath": "/home/workspace/flutter_project",  // Ajusta según tu imagen
+        "dart.sdkPath": "/home/workspace/flutter_project/bin/cache/dart-sdk"
+      },
+      "extensions": [
+        "dart-code.flutter",
+        "circlecodesolution.ccs-flutter-color",
+        "Dart-Code.flutter",
+        "alexisvt.flutter-snippets",
+        "MarufHassan.flutter-snippets"
+      ],
+      "launch": {
+        "version": "0.2.0",
+        "configurations": [
+          {
+            "name": "Flutter",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "cwd": "/home/workspace/flutter_project"  // Asegúrate que apunte al workspace correcto
+          },
+          {
+            "name": "Flutter (Debug Mode)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "debug"
+          },
+          {
+            "name": "Flutter (Profile Mode)",
+            "request": "launch",
+            "type": "dart", 
+            "program": "lib/main.dart",
+            "flutterMode": "profile"
+          },
+          {
+            "name": "Flutter (Release Mode)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "release"
+          }
+        ]
+      }
+    }
+  }
+}
